@@ -1297,3 +1297,140 @@ textarea {
   border-left: none;
   font-weight: 800;
 }
+
+/* Comprehensive Responsive Media Queries for Mobile & Tablet */
+@media (max-width: 992px) {
+  .pse-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .pse-hero__content-col {
+    text-align: center;
+  }
+
+  .pse-hero__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pse-hero__venue-pill {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .pse-hero__venue-left, .pse-hero__venue-right {
+    text-align: center;
+  }
+
+  .pse-hero__venue-divider {
+    display: none;
+  }
+
+  .pse-trust-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pse-header__inner {
+    gap: 0.5rem;
+  }
+
+  .pse-logo-badge {
+    min-width: 125px;
+    padding: 0.55rem 0.75rem 0.65rem;
+  }
+
+  .pse-logo-badge__title {
+    font-size: 0.95rem;
+  }
+
+  .pse-header__nav-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .pse-split-register-btn__text {
+    padding: 0.55rem 0.85rem;
+    font-size: 0.75rem;
+  }
+
+  .pse-hero {
+    padding: 3rem 0 3.5rem;
+  }
+
+  .pse-hero__heading {
+    font-size: 2.1rem;
+  }
+
+  .pse-hero__showcase {
+    max-width: 360px;
+  }
+
+  .pse-hero__pill-wrapper {
+    height: 165px;
+  }
+
+  .pse-schools__card {
+    width: 220px;
+    height: 95px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pse-header__nav {
+    display: none;
+  }
+
+  .pse-trust-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .pse-trust-badge {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .pse-laurel {
+    width: 28px;
+    height: 50px;
+  }
+
+  .pse-trust-badge__content {
+    font-size: 0.82rem;
+  }
+
+  .pse-trust-badge__content strong {
+    font-size: 1.05rem;
+  }
+
+  .pse-hero__heading {
+    font-size: 1.8rem;
+  }
+
+  .pse-hero__venue-pill {
+    padding: 0.75rem 1.15rem;
+    border-radius: 1rem;
+    gap: 0.75rem;
+  }
+
+  .pse-form-card {
+    padding: 1.65rem 1.25rem;
+  }
+
+  .pse-modal {
+    padding: 2rem 1.25rem 1.5rem;
+    max-width: 94vw;
+  }
+
+  .pse-modal .pse-form-card__title,
+  .pse-modal h2 {
+    font-size: 1.4rem;
+    padding-right: 2.5rem;
+  }
+}

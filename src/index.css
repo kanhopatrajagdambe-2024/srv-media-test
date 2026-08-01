@@ -127,43 +127,50 @@ textarea {
   gap: 1rem;
 }
 
-.pse-header__logo {
+/* High-Resolution Responsive Vector Brand Logo */
+.pse-brand-logo {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
 }
 
-.pse-header__logo-badge {
-  background: #f4c550;
-  color: #0f0728;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 0.68rem;
-  padding: 0.2rem 0.55rem;
-  border-radius: 0.3rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+.pse-brand-logo__crest {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(15, 26, 52, 0.25));
+  transition: transform 0.25s ease;
+}
+.pse-brand-logo:hover .pse-brand-logo__crest {
+  transform: scale(1.05);
 }
 
-.pse-header__logo-text-group {
+.pse-brand-logo__text-group {
   display: flex;
   flex-direction: column;
 }
 
-.pse-header__logo-title {
-  font-size: 1.1rem;
+.pse-brand-logo__edition {
+  display: inline-block;
+  align-self: flex-start;
+  background: #f4c550;
+  color: #0f0728;
+  font-weight: 800;
+  font-size: 0.62rem;
+  padding: 0.12rem 0.45rem;
+  border-radius: 0.25rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.1rem;
+}
+
+.pse-brand-logo__title {
+  font-size: 1.15rem;
   font-weight: 800;
   line-height: 1.15;
   color: #0f172a;
   font-family: var(--font-heading);
-}
-
-.pse-header__logo-sub {
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: #6d28d9;
-  letter-spacing: 0.5px;
 }
 
 .pse-header__nav {
@@ -1441,30 +1448,23 @@ textarea {
     gap: 0.5rem;
   }
 
-  .pse-logo-badge {
-    min-width: 120px;
-    padding: 0.45rem 0.65rem;
-    border-radius: 0.5rem;
+  .pse-brand-logo {
+    gap: 0.5rem;
   }
 
-  .pse-logo-badge__edition {
-    font-size: 0.55rem;
-    padding: 0.1rem 0.3rem;
+  .pse-brand-logo__crest {
+    width: 36px;
+    height: 36px;
   }
 
-  .pse-logo-badge__title {
-    font-size: 0.85rem;
-    line-height: 1.15;
+  .pse-brand-logo__edition {
+    font-size: 0.52rem;
+    padding: 0.1rem 0.35rem;
   }
 
-  .pse-split-register-btn__icon {
-    padding: 0.45rem 0.65rem;
+  .pse-brand-logo__title {
     font-size: 0.95rem;
-  }
-
-  .pse-split-register-btn__text {
-    padding: 0.45rem 0.75rem;
-    font-size: 0.72rem;
+    line-height: 1.15;
   }
 
   .pse-hero {

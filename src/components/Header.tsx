@@ -25,23 +25,32 @@ export const Header: React.FC<HeaderProps> = ({
       </a>
 
       <div className="container pse-header__inner">
-        {/* Standard Sleek Logo Brand */}
+        {/* High-Resolution Vector Brand Logo */}
         <div
-          className="pse-header__logo"
+          className="pse-brand-logo"
           onClick={() => handleTabClick('exhibition')}
           style={{ cursor: 'pointer' }}
           role="button"
           tabIndex={0}
           aria-label="Premier Schools Exhibition Home"
         >
-          <span className="pse-header__logo-badge">22nd EDITION</span>
-          <div className="pse-header__logo-text-group">
-            <span className="pse-header__logo-title">Premier Schools Exhibition</span>
-            <span className="pse-header__logo-sub">GURUGRAM 2025</span>
+          {/* Vector Crest Shield Emblem */}
+          <svg className="pse-brand-logo__crest" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="100" height="100" rx="18" fill="#0F1A34" />
+            <path d="M50 16 L78 30 V55 C78 72 50 84 50 84 C50 84 22 72 22 55 V30 Z" fill="#0F1A34" stroke="#F4C550" strokeWidth="4" />
+            <path d="M50 26 L65 35 V50 C65 62 50 70 50 70 C50 70 35 62 35 50 V35 Z" fill="#F4C550" />
+            <rect x="66" y="12" width="22" height="22" rx="5" fill="#DC2626" stroke="#FFFFFF" strokeWidth="2" />
+            <text x="77" y="27" font-family="sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">A</text>
+          </svg>
+
+          {/* Typography Brand Name */}
+          <div className="pse-brand-logo__text-group">
+            <span className="pse-brand-logo__edition">22nd EDITION</span>
+            <span className="pse-brand-logo__title">Premier Schools Exhibition</span>
           </div>
         </div>
 
-        {/* Center Nav Tabs */}
+        {/* Desktop Nav Tabs */}
         <nav className="pse-header__nav pse-header__nav--desktop" aria-label="Main Navigation">
           <button
             className={`pse-header__nav-btn ${activeTab === 'exhibition' ? 'pse-header__nav-btn--active' : ''}`}
@@ -59,7 +68,7 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
         </nav>
 
-        {/* Right Action Area: Standard CTA & Mobile Toggle */}
+        {/* Right Action Area: CTA Button & Mobile Toggle */}
         <div className="pse-header__actions">
           <button
             className="pse-header__cta-btn"

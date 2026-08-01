@@ -25,29 +25,23 @@ export const Header: React.FC<HeaderProps> = ({
       </a>
 
       <div className="container pse-header__inner">
-        {/* Top Left Floating Logo Badge matching Figma */}
+        {/* Standard Sleek Logo Brand */}
         <div
-          className="pse-header__logo-container"
+          className="pse-header__logo"
           onClick={() => handleTabClick('exhibition')}
           style={{ cursor: 'pointer' }}
           role="button"
           tabIndex={0}
           aria-label="Premier Schools Exhibition Home"
         >
-          <div className="pse-logo-badge">
-            <div className="pse-logo-badge__top">
-              <span className="pse-logo-badge__edition">22nd EDITION</span>
-              <span className="pse-logo-badge__red-icon">A</span>
-            </div>
-            <div className="pse-logo-badge__title">
-              Premier<br />
-              Schools<br />
-              Exhibition
-            </div>
+          <span className="pse-header__logo-badge">22nd EDITION</span>
+          <div className="pse-header__logo-text-group">
+            <span className="pse-header__logo-title">Premier Schools Exhibition</span>
+            <span className="pse-header__logo-sub">GURUGRAM 2025</span>
           </div>
         </div>
 
-        {/* Desktop Nav Tabs */}
+        {/* Center Nav Tabs */}
         <nav className="pse-header__nav pse-header__nav--desktop" aria-label="Main Navigation">
           <button
             className={`pse-header__nav-btn ${activeTab === 'exhibition' ? 'pse-header__nav-btn--active' : ''}`}
@@ -65,20 +59,20 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
         </nav>
 
-        {/* Right Action Area: Register CTA & Mobile Hamburger Toggle */}
+        {/* Right Action Area: Standard CTA & Mobile Toggle */}
         <div className="pse-header__actions">
           <button
-            className="pse-split-register-btn"
+            className="pse-header__cta-btn"
             onClick={onOpenRegisterModal}
             aria-label="Register Now for Exhibition"
           >
-            <span className="pse-split-register-btn__icon" aria-hidden="true">
-              ↗
-            </span>
-            <span className="pse-split-register-btn__text">REGISTER NOW</span>
+            <span>Register Now</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
           </button>
 
-          {/* Mobile Hamburger Toggle Button */}
           <button
             className="pse-header__hamburger"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -90,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Mobile Slide-Down Navigation Menu */}
+      {/* Mobile Slide-Down Menu Drawer */}
       {mobileMenuOpen && (
         <div className="pse-header__mobile-menu">
           <button
@@ -112,7 +106,7 @@ export const Header: React.FC<HeaderProps> = ({
               onOpenRegisterModal();
             }}
           >
-            ↗ REGISTER NOW FOR EXHIBITION
+            Register Now
           </button>
         </div>
       )}
